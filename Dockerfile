@@ -1,7 +1,7 @@
 FROM alpine:edge
 
 # install common packages
-RUN apk add --no-cache strongswan iptables openssl bash curl
+RUN apk add --no-cache linux-headers linux-grsec strongswan iptables openssl bash curl
 
 ENTRYPOINT ["ipsec"]
 CMD ["start", "--nofork"]
