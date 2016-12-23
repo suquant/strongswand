@@ -1,7 +1,7 @@
 FROM alpine:edge
+MAINTAINER George Kutsurua <g.kutsurua@gmail.com>
 
-# install common packages
-RUN apk add --no-cache linux-headers linux-grsec strongswan iptables openssl bash curl
+RUN apk add --no-cache strongswan iptables
 
 ENTRYPOINT ["ipsec"]
 CMD ["start", "--nofork"]
